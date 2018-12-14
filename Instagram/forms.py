@@ -19,10 +19,10 @@ class ImageForm(forms.ModelForm):
         model = Image
         exclude = ['likes', 'post_date', 'profile']
     
-# class ProfileForm(forms.ModelForm):
-#     class Meta:
-#         model = Profile
-#         exclude = ['user']
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        exclude = ['user']
 
 # class CommentForm(forms.ModelForm):
 #     class Meta:
