@@ -1,0 +1,39 @@
+<!-- {% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div>
+        <div>
+            {% for img in images %}
+            <div>
+                <p>
+                    <a href="{% url 'profile' username=img.profile.username %}">{{img.profile.username}}</a>
+                </p>
+                <img src="{{img.photo.cdn_url}}" alt="Image">
+                <ul>
+                    <li>
+                        <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <a href="{% url 'single_image' image_id=img.id %}"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="{% url 'profile' username=img.profile.username %}">{{img.profile.username}}</a>
+                    </li>
+                    <li>
+                        {% autoescape on %}
+                        <p>{{img.image_caption|safe}} </p>
+                        {% endautoescape %}
+                    </li>
+                </ul>
+
+            </div>
+            {% empty %}
+            <h2>No images. Follow some people to see their images</h2>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %} -->
