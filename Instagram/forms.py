@@ -13,11 +13,11 @@ class SignupForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2')
 
-# class ImageForm(forms.ModelForm):
+class ImageForm(forms.ModelForm):
 
-#     class Meta:
-#         model = Image
-#         exclude = ['likes', 'post_date', 'profile']
+    class Meta:
+        model = Image
+        exclude = ['likes', 'post_date', 'profile']
     
 # class ProfileForm(forms.ModelForm):
 #     class Meta:
