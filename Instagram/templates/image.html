@@ -2,47 +2,47 @@
 {% load bootstrap4 %}
 
 {% block content %}
-<div>
-    <div>
-        <div>
-            <div>
-                <p>
+<div class="container top">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="home-images">
+                <p class="home-text">
                     <a href="{% url 'profile' username=image.profile.username %}">{{image.profile.username}}</a>
                 </p>
                 <img src="{{image.image_pic.url}}" alt="Image">
-                <ul>
-                    <li>
+                <ul class="list-inline home-text">
+                    <li class="list-inline-item">
                         <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
                     </li>
                 </ul>
-                <ul><br>
-                    <li >
+                <ul class="list-inline home-list">
+                    <li class="list-inline-item">
                         <a href="{% url 'profile' username=image.profile.username %}">{{image.profile.username}}</a>
                     </li>
-                    <li>
+                    <li class="list-inline-item">
                         <p>{{image.image_caption}} </p>
                     </li>
                 </ul>
-                <p> {{comments|length}} comments </p>
+                <p class="home-list"> {{comments|length}} comments </p>
                 <hr>
-                <p>Comments</p>
-                <div>
+                <p class="home-list">Comments</p>
+                <div class="comments">
                     {% for comment in comments %}
-                    <div>
-                        <div>
-                            <ul>
-                                <li>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <ul class="list-inline home-list">
+                                <li class="list-inline-item">
                                     <a href="{% url 'profile' username=comment.user.username %}">{{comment.user.username}}</a>
                                 </li>
-                                <li>
+                                <li class="list-inline-item">
                                     <p>{{comment.comment}} </p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     {% empty %}
-                    <div>
-                        <div>
+                    <div class="row">
+                        <div class="col-md-10">
                             <h3>There are no comments</h3>
                         </div>
                     </div>
