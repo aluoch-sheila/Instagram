@@ -2,23 +2,23 @@
 {% load bootstrap4 %}
 
 {% block content %}
-<div>
-    <div>
-        <div>
+<div class="container">
+    <div class="row signup-page">
+        <div class="col-md-6">
             <img src="/static/img/43cc71bb1b43.png" alt="Phone images">
         </div>
-        <div>
+        <div class="col-md-6">
             {% if form.errors %}
             <p>Some information may be incorrect</p>
             {% endif %}
-            <div>
-                <div>
-                    <h1>Instagram</h1>
-                    <div>
+            <div class="signup-fields">
+                <div class="section">
+                    <h1>Instugrum</h1>
+                    <div class="form-section">
                         <form method="POST">
                             {% csrf_token %}
                             {% bootstrap_form form %}
-                            <div>
+                            <div class="form-group">
                                 <input type="submit" class="btn btn-primary btn-sm" value="Sign up">
                             </div>
                             <input type="hidden" name="next" value="{{next}}">
