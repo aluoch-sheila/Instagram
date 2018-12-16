@@ -94,23 +94,23 @@ def edit_profile(request):
 
     return render(request, 'profile/edit_profile.html', {'form':form})
 
-# @login_required(login_url='/accounts/login')
-# def single_image(request, image_id):
-#     image = Image.get_image_id(image_id)
-#     comments = Comments.get_comments_by_images(image_id)
+@login_required(login_url='/accounts/login')
+def single_image(request, image_id):
+    image = Image.get_image_id(image_id)
+    comments = Comments.get_comments_by_images(image_id)
 
-#     if request.method == 'POST':
-#         form = CommentForm(request.POST)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.image = image
-#             comment.user = request.user
-#             comment.save()
-#             return redirect('single_image', image_id=image_id)
-#     else:
-#         form = CommentForm()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.image = image
+            comment.user = request.user
+            comment.save()
+            return redirect('single_image', image_id=image_id)
+    else:
+        form = CommentForm()
         
-#     return render(request, 'image.html', {'image':image, 'form':form, 'comments':comments})
+    return render(request, 'image.html', {'image':image, 'form':form, 'comments':comments})
 
 def search(request):
     if 'search' in request.GET and request.GET['search']:
