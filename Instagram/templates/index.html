@@ -5,6 +5,8 @@
     <div class="row">
         <div class="col-md-7">
             {% for img in images %}
+            <div class="card">
+                <div class="card-body">
             <div class="home-images">
                 <p class="home-text">
                     <a href="{% url 'profile' username=img.profile.username %}">{{img.profile.username}}</a>
@@ -29,6 +31,8 @@
                     </li>
                 </ul>
 
+            </div>
+                </div>
             </div>
             {% empty %}
             <h2>No images. Follow some people to see their images</h2>
