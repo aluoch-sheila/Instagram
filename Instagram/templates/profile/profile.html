@@ -8,9 +8,9 @@
             <div class="row top-section">
                 <div class="col-md-5 profile-image">
                     {% if profile_details.prof_pic %}
-                    <img src="{{profile_details.prof_pic.url}}" alt="profile-photo">
+                    <img src="{{profile_details.prof_pic.url}}" alt="profile-photo" class="img-fluid" alt="Responsive image" style="border-radius: 50%;">
                     {% else %}
-                    <img src="/static/img/avatah.png" alt="avatar" class="img-fluid" alt="Responsive image">
+                    <img src="/static/img/avatar.png" alt="avatar" class="img-fluid" alt="Responsive image">
                     {% endif %}
                 </div>
                 <div class="col-md-5 text-center">
@@ -54,7 +54,7 @@
     <div class="row user-images">
         {% for img in images %}
         <div class="col-md-4 images">
-            <img src="{{img.photo.cdn_url}}" alt="Image">
+            <img src="{{img.photo.url}}" alt="Image" class="img-fluid" alt="Responsive image">
         </div>
         {% empty %}
         <div class="col-md-12">
