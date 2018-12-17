@@ -24,11 +24,13 @@
                     <li class="list-inline-item">
                         <a href="{% url 'profile' username=img.profile.username %}">{{img.profile.username}}</a>
                     </li>
+                    <div class="text-muted">
                     <li class="list-inline-item">
                         {% autoescape on %}
                         <p>{{img.image_caption|safe}} </p>
                         {% endautoescape %}
                     </li>
+                    </div>
                 </ul>
 
             </div>
