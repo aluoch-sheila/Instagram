@@ -1,4 +1,4 @@
-# Instazone
+# Instagram
  A  a clone of the image sharing network, Instagram. Users can sign up login, view and post photos and follow other users.
 ## Built By [Aluoch Sheila](https://github.com/aluoch-sheila/Instagram.git)
 
